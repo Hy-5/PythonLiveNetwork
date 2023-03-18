@@ -1,6 +1,8 @@
-import subprocess, sys
+import subprocess, sys, socket
+import server, client
 
 necessaryImports=["socket"]
+
 
 for i in necessaryImports:
     try:
@@ -12,7 +14,7 @@ for i in necessaryImports:
 
 
 def main(argv):
-    print("start")
+    server.serverSocket() #Running the server on an infinite loop, listening to the client
 
 if __name__=="__main__":
     main(sys.argv[1:])
