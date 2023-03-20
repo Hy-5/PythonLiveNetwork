@@ -1,7 +1,7 @@
 import subprocess, sys, socket, subprocess, RSA
 import server, client
 
-necessaryImports=["socket"]
+necessaryImports=["socket", "PIL"]
 
 
 for i in necessaryImports:
