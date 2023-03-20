@@ -6,6 +6,5 @@ Live network architecture to host python apps and test RSA encryption in a live 
 2.  To install the dependencies, open your IDE or a terminal in the source folder, and run <pip install -r requirements.txt> #without the quotes <>
 3.  Run the main function: <python main.py> #without the quotes <>
 4.  Wait until you see a message in the terminal saying "Server is up" followed by the socket address
-5.  If the message "Server is up" takes a while to appear, go to the RSA.py file, and comment out the last line ("plt.show"). The code will still run, but you'll skip the automatic
-    display of the encrypted image that tends to hang up sometimes
+5.  In the RSA.py file, the last line, "plt.show()" is commented oud by default, as, for the time being, it hangs a lot and stops the server from running
 6.  Run the client in a separate terminal: <python client.py> #without the quotes <>
