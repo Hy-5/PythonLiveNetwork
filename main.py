@@ -1,4 +1,4 @@
-import subprocess, sys, socket, subprocess, RSA
+import subprocess, sys, socket, subprocess
 import server, client
 
 necessaryImports=["socket", "PIL"]
@@ -12,6 +12,7 @@ for i in necessaryImports:
         subprocess.check_call(["pip", "install", i])
         __import__(i)
 
+import RSA
 
 def main(argv):
     server.serverSocket() #Running the server on an infinite loop, listening to the client
