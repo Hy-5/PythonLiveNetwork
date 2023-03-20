@@ -1,4 +1,4 @@
-import subprocess, sys, socket
+import subprocess, sys, socket, subprocess, RSA
 import server, client
 
 necessaryImports=["socket"]
