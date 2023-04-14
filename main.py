@@ -1,4 +1,4 @@
-import sys, socket, RSA
+import sys, socket
 import server
 
 def main(argv):

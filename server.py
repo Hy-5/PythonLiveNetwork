@@ -24,18 +24,24 @@ def serverSocket():
         with conn:
             print(f"Connected by {addr}")
             
-            image_data = b""
+            list_data = b""
             while True: # Receiving and putting image data back together
                 data = conn.recv(1024)
                 if not data:
                     break
-                image_data += data
+                list_data += data
             i+=1
-            print(f"Received {len(image_data)} bytes of image data.") #Total Byte count for verification
+            print(f"Received {len(list_data)} bytes of image data.") #Total Byte count for verification
 
-            with open(fileName+str(i)+fileExtension, "wb") as f: #Reconstructing image (to be preceded by decryption phase )
-                f.write(image_data)
-                print(f"Image reconstructed as {fileName}"+str(i)+f"{fileExtension}")
+
+            
+            print("Reconstructing the image server side")
+            from RSA import decrypt
+            decrypt()
+            
+            """with open(fileName+str(i)+fileExtension, "wb") as f: #Reconstructing image (to be preceded by decryption phase )
+                f.write(list_data)
+                print(f"Image reconstructed as {fileName}"+str(i)+f"{fileExtension}")"""
     
     
 
